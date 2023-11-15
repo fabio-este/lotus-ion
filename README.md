@@ -10,7 +10,7 @@ All Classes, Config, Assets and Templates can be edited and extended in the pack
 
 ### Setup
 
-* 'install.sh'
+* Quickinstall via install.sh
 * import DB
 
 ### Deployment
