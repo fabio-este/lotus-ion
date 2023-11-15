@@ -1,0 +1,16 @@
+#
+# TCEFORM
+#
+TCEFORM {
+    pages {
+
+    }
+    tt_content {
+        frame_class{
+    addItems {
+                frame-round-images = Round Images
+                frame-border-radius-images = Round Corners Images
+            }
+        }
+    }
+}

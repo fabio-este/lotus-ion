@@ -1,0 +1,22 @@
+
+
+//
+// Import needed Bootstrap Package Files
+//
+@import "../../../../bootstrap-package/Resources/Public/Scss/bootstrap5/theme.scss";
+//
+// Variables
+//
+@import "variables";
+
+
+// Page Layout
+@import "components/header.scss";
+@import "components/social-bar.scss";
+@import "components/scroll-top.scss";
+@import "components/footer.scss";
+
+// Content Elements
+@import "components/frames.scss";
+
+

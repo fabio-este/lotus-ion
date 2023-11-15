@@ -1,0 +1,21 @@
+{
+    "name": "fabio-este/site-package",
+    "type": "typo3-cms-extension",
+    "description": "",
+    "homepage": "https://www.fabio-stegmeyer.de",
+    "license": ["GPL-2.0-or-later"],
+    "keywords": ["TYPO3 CMS"],
+    "require": {
+        
+    },
+    "autoload": {
+        "psr-4": {
+            "FabioEste\\Sitepackage\\": "Classes/"
+        }
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "site-package"
+        }
+    }
+}

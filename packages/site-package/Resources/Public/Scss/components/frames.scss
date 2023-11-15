@@ -1,0 +1,8 @@
+.frame{
+    &.frame-frame-round-images{
+         picture {
+            border-radius: 50%;
+            overflow: hidden;
+        }
+    }
+}

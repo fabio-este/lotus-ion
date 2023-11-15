@@ -1,0 +1,11 @@
+@media (min-width: 992px){
+    .navbar-mainnavigation .navbar-nav {
+justify-content: end;
+    }
+
+}
+
+button.navbar-toggler:focus:not(:focus-visible) {
+        outline: 0;
+        box-shadow: none;
+    }

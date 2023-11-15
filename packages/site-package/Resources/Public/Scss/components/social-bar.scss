@@ -1,0 +1,72 @@
+
+div.contact-floater {
+
+    position: fixed;
+    right: 20px;
+    bottom: 55px;
+    top: auto;
+    z-index: 9999;
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+        right: 20px;
+
+        li {
+            width: 48px;
+            height: 48px;
+            border-radius: 5px;
+            overflow: hidden;
+
+            svg.svg-inline--fa.fa-envelope.fa-w-16 {
+                vertical-align: 0.125rem;
+            }
+
+            svg.svg-inline--fa.fa-map-marker-alt.fa-w-12 {
+                vertical-align: 0.125rem;
+            }
+
+            a {
+                background: $primary;
+                font-size: 32px;
+                line-height: 48px;
+                color: $white;
+                display: inline-block;
+                width: 100%;
+                height: 100%;
+                @include transition(all 250ms ease-in-out);
+
+                &:hover,    &:focus {
+                    background: $white;
+                    color: $primary;    @include transition(all 250ms ease-in-out);
+                }
+
+                i, .svg-inline--fa {
+                    text-align: center;
+                    display: inline-block;
+                    width: 100%;
+                }
+
+            }
+            @include transition(all 250ms ease-in-out);
+            &:hover,    &:focus {
+                @include transition(all 250ms ease-in-out);
+                @include box-shadow(0 2px 5px 2px rgba(0,0,0,0.2));
+            }
+
+
+            &::after {
+                height: 1px;
+                background: $white;
+                width: 75%;
+            }
+
+            &.divider {
+                height: 7px;
+                width: 100%;
+            }
+        }
+    }
+}
+
+

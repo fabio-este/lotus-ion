@@ -1,0 +1,28 @@
+
+footer#page-footer {
+a{
+    display:  inline-block;    
+    text-decoration: none;
+    color: #fff;
+    @include transition(all 150ms ease-in-out);
+    &:hover{
+        color: $primary;
+        transform: translateX(3px);
+
+    }
+}
+
+
+ul{ 
+    list-style-type:none;
+    padding-left: 0;
+}
+.footer-section-meta {
+    background: #000;
+
+    .footer-copyright {
+        padding: 1.275rem;
+        color: #fff;
+    }
+    }
+}
