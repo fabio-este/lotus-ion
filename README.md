@@ -11,8 +11,11 @@ All Classes, Config, Assets and Templates can be edited and extended in the pack
 ### Setup
 
 * 'install.sh'
-* import db
-* import db
+* import DB
+
+### Deployment
+
+* via Deployer => deploy.php
 
 ## License
 
