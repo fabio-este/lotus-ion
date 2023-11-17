@@ -1,2 +1,2 @@
 ddev start
-ddev auth ssh
+ddev auth ssh && ddev ssh
