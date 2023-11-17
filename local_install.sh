@@ -15,11 +15,19 @@ fi
 ########################################
 
 # Add assets symlink
-if [[ -L assets ]]; 
+if [[ -L _assets ]]; 
 then
-  echo "assets symlink already exists"
+  echo "_assets symlink already exists"
 else
-    ln -s packages/site-package/Resources/Public assets
+    ln -s packages/site-package/Resources/Public _assets
+fi
+
+# Add templates symlink
+if [[ -L _templates ]]; 
+then
+  echo "_templates symlink already exists"
+else
+    ln -s packages/site-package/Resources/Private _templates
 fi
 
 # Add bootstrap-package symlink
