@@ -1,24 +1,29 @@
-.server_mittwald: &base_mittwald
-  hostname: lotus-ion.com
-  user: p655552
-  port: 22
-  forward_agent: true
-  pty: true
-  deploy_path: /home/www/p655552/html/lotus-ion.com
-  bin:
-    php: /usr/local/bin/php_cli
-    composer: /usr/local/bin/composer
+hosts:
+  .server_mittwald: &base_mittwald
+    user: p655552
+    http_user: p655552
+    port: 22
+    forward_agent: true
+    pty: true
+    deploy_path: /home/www/p655552/html/
+    bin:
+      php: /usr/local/bin/php_cli
+      composer: /usr/local/bin/composer
 
-preview.lotus-ion.com:
-  <<: *base_mittwald
-  stage: preview
-  forward_agent: true
-  branch: develop
-  hostname: "preview.lotus-ion.com"
+  preview.lotus-ion.com:
+    <<: *base_mittwald
+    remote_user: p655552
+    stage: preview
+    forward_agent: true
+    branch: master
+    deploy_path: "/home/www/p655552/html/preview.lotus-ion.com"
+    hostname: "p655552.webspaceconfig.de"
 
-www.lotus-ion.com:
-  <<: *base_mittwald
-  stage: production
-  forward_agent: true
-  branch: master
-  hostname: "www.lotus-ion.com"
+  www.lotus-ion.com:
+    <<: *base_mittwald
+    remote_user: p655552
+    stage: production
+    forward_agent: true
+    branch: master
+    deploy_path: "/home/www/p655552/html/www.lotus-ion.com"
+    hostname: "www.lotus-ion.com" 	                          

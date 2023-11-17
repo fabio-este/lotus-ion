@@ -5,14 +5,15 @@ namespace Deployer;
 use PhpParser\Comment;
 
 require 'recipe/common.php';
-require 'recipe/rsync.php';
+require 'recipe/typo3.php';
+require 'contrib/rsync.php';
 
 date_default_timezone_set('Europe/Berlin');
 
 /**
  * Configuration
  */
-set('repository', 'git@git.rheingans.io:typo3/think-tank-owl-bric.git');
+set('repository', 'https://github.com/fabio-este/lotus-ion.git');
 
 // [Optional] Allocate tty for git clone. Default value is false.
 set('git_tty', true);
@@ -29,6 +30,7 @@ set('bin/php', static function () {
     }
     return locateBinaryPath('php');
 });
+
 set('bin/composer', static function () {
     if (has('bin')) {
         $bin = get('bin');
@@ -39,58 +41,63 @@ set('bin/composer', static function () {
     return locateBinaryPath('composer');
 });
 
-set('composer_options', '{{composer_action}} --prefer-dist --no-dev --no-progress --no-interaction --optimize-autoloader --no-suggest');
-
 /**
  * Hosts
  */
-inventory('servers.yml');
+import('servers.yaml');
+
 
 /**
  * TYPO3
  */
-set('typo3_root', 'private');
-set('typo3_web', 'public');
+set('typo3_public', 'public');
+
+/**
+ * Shared
+ */
 
 // Shared directories
 set('shared_dirs', [
-    '{{typo3_root}}/fileadmin',
-    '{{typo3_root}}/typo3temp',
-    '{{typo3_root}}/uploads',
+    '{{typo3_public}}/fileadmin',
+    '{{typo3_public}}/typo3temp',
+    '{{typo3_public}}/uploads',
     'config',
     'var'
 ]);
 
 // Shared files
 set('shared_files', [
-    '{{typo3_root}}/typo3conf/LocalConfiguration.php',
-    //'config/sites/thinktank-owl/config.yaml',
-    //'config/sites/bric-owl/config.yaml',
-    'public/robots.txt',
+    '{{typo3_public}}/robots.txt',
+    '{{typo3_public}}/.htaccess'
 ]);
 
-// Writeable directories
+
+/**
+ * Writable
+ */
+
+// Writable directories
 set('writable_dirs', [
-    '{{typo3_root}}/fileadmin',
-    '{{typo3_root}}/typo3temp',
-    '{{typo3_root}}/typo3conf',
-    '{{typo3_root}}/uploads',
+    '{{typo3_public}}/fileadmin',
+    '{{typo3_public}}/typo3temp',
+    '{{typo3_public}}/typo3conf',
+    '{{typo3_public}}/uploads',
     'config',
     'var'
 ]);
 
-
+// Writable options
 set('writable_tty', true);
 set('writable_mode', 'chmod');
-set('writable_use_sudo', true);
+set('writable_use_sudo', false);
 set('writable_chmod_mode', '0775');
 set('writable_chmod_recursive', true);
 
-/**
- * TYPO3 specific tasks
- */
 
-set('typo3cms_command', 'vendor/bin/typo3cms');
+/**
+ * TYPO3 specific tasks 
+ */
+set('typo3cms_command', 'vendor/bin/typo3');
 
 task('typo3:install:fixfolderstructure', function () {
     run('{{bin/php}} {{release_path}}/{{typo3cms_command}} install:fixfolderstructure');
@@ -108,67 +115,45 @@ task('typo3:database:updateschema', function () {
     run('{{bin/php}} {{release_path}}/{{typo3cms_command}} database:updateschema');
 })->desc('update database schema');
 
-/*task('typo3:language:update', function () {
+task('typo3:language:update', function () {
     run('{{bin/php}} {{release_path}}/{{typo3cms_command}} language:update');
 })->desc('Update all active languages');
-*/
 
-task('deploy:typo3', [
+
+task('deploy:typo3_tasks', [
     'typo3:install:fixfolderstructure',
     'typo3:install:extensionsetupifpossible',
-   // 'typo3:language:update',
+    'typo3:database:updateschema',
+    'typo3:cache:flush',
+    'typo3:language:update',
 ]);
+
 
 /**
- * Frontend
+ * composer
  */
+set('composer_action', 'install');
 
-set('bin/yarn', function () {
-    return runLocally('which yarn');
-});
+set('composer_options', '--verbose --prefer-dist --no-progress --no-interaction --no-dev --optimize-autoloader');
 
-task('yarn:install', function () {
-    runLocally("{{bin/yarn}} install");
-});
-task('yarn:build', function () {
-    runLocally("{{bin/yarn}} run build");
-});
 
-task('frontend', [
-    'yarn:install',
-    'yarn:build'
-]);
-
+/**
+ * rsync
+ */
 
 $rsync = get('rsync');
 $rsync['options'] = ['chmod=Dug=rwx,Do=rx,Fug=rw,Fo=r'];
 set('rsync', $rsync);
 
-set('rsync_src', __DIR__ . '/packages/site_package/Resources/Public');
-set('rsync_dest', '{{release_path}}/packages/site_package/Resources/Public');
 
 /**
  * Main task
  */
-task('deploy', [
-    'deploy:prepare',
-    'deploy:lock',
-    'deploy:release',
-    'deploy:update_code',
-    'frontend',
-    'rsync',
-    'deploy:vendors',
-    'deploy:shared',
-    'deploy:writable',
-    'deploy:typo3',
-    'deploy:symlink',
-    'htaccess',
-    'deploy:unlock',
-    'cleanup',
-])->desc('Deploy your project');
+task('deploy')->desc('Deploy your project');
 
-after('deploy', 'success');
+after('deploy:vendors', 'deploy:typo3_tasks');
 after('deploy:failed', 'deploy:unlock');
+
 
 /**
  * Parse the .htaccess file for the right environment
