@@ -13,14 +13,22 @@ date_default_timezone_set('Europe/Berlin');
 /**
  * Configuration
  */
+
+// Project name
+set('application', 'lotus-ion.com');
+
+// Import hosts
+import('servers.yaml');
+
+// Public dir
+set('typo3_public', 'public');
+
 set('repository', 'https://github.com/fabio-este/lotus-ion.git');
 
 // [Optional] Allocate tty for git clone. Default value is false.
 set('git_tty', true);
 
-// Project name
-set('application', 'lotus-ion.com');
-
+// get local bin/php path
 set('bin/php', static function () {
     if (has('bin')) {
         $bin = get('bin');
@@ -31,6 +39,7 @@ set('bin/php', static function () {
     return locateBinaryPath('php');
 });
 
+// get local bin/composer path
 set('bin/composer', static function () {
     if (has('bin')) {
         $bin = get('bin');
@@ -41,21 +50,10 @@ set('bin/composer', static function () {
     return locateBinaryPath('composer');
 });
 
-/**
- * Hosts
- */
-import('servers.yaml');
-
-
-/**
- * TYPO3
- */
-set('typo3_public', 'public');
 
 /**
  * Shared
  */
-
 // Shared directories
 set('shared_dirs', [
     '{{typo3_public}}/fileadmin',
@@ -97,35 +95,24 @@ set('writable_chmod_recursive', true);
 /**
  * TYPO3 specific tasks 
  */
-set('typo3cms_command', 'vendor/bin/typo3');
+set('typo3_command', 'vendor/bin/typo3');
 
-task('typo3:install:fixfolderstructure', function () {
-    run('{{bin/php}} {{release_path}}/{{typo3cms_command}} install:fixfolderstructure');
-})->desc('Fix Folder Structure');
-
-task('typo3:install:extensionsetupifpossible', function () {
-    run('{{bin/php}} {{release_path}}/{{typo3cms_command}} install:extensionsetupifpossible');
-})->desc('Setup all active extensions');
-
-task('typo3:cache:flush', function () {
-    run('{{bin/php}} {{release_path}}/{{typo3cms_command}} cache:flush');
+task('typo3:extension:setup', function () {
+    run('{{bin/php}} {{release_path}}/{{typo3_command}} extension:setup');
 })->desc('Flush the cache');
 
-task('typo3:database:updateschema', function () {
-    run('{{bin/php}} {{release_path}}/{{typo3cms_command}} database:updateschema');
-})->desc('update database schema');
+task('typo3:cache:flush', function () {
+    run('{{bin/php}} {{release_path}}/{{typo3_command}} cache:flush');
+})->desc('Flush the cache');
 
 task('typo3:language:update', function () {
-    run('{{bin/php}} {{release_path}}/{{typo3cms_command}} language:update');
+    run('{{bin/php}} {{release_path}}/{{typo3_command}} language:update');
 })->desc('Update all active languages');
 
-
 task('deploy:typo3_tasks', [
-    'typo3:install:fixfolderstructure',
-    'typo3:install:extensionsetupifpossible',
-    'typo3:database:updateschema',
-    'typo3:cache:flush',
+    'typo3:extension:setup',
     'typo3:language:update',
+    'typo3:cache:flush'
 ]);
 
 
