@@ -1,21 +1,29 @@
 # Lotus Ion Homepage
 
-All Classes, Config, Assets and Templates can be edited and extended in the packages/site-package
+## General
+
+*All Classes, Config, Assets and Templates can be edited and extended in the packages/site-package
 
 ## Prerequisites
 
 * PHP 8.1
-* [Composer](https://getcomposer.org/download/)
-* DDEV [LOCAL DEVELOPMENT]
+* MySql
+* Apache2 Webserver
+* Composer (https://getcomposer.org/download/)
+* DDEV [LOCAL DEVELOPMENT] (https://ddev.readthedocs.io/en/stable/users/install/)
 
 ### Setup
 
-* Quickinstall via install.sh
+* Quickinstall via local_install.sh (!!! DON'T USE ON SERVER !!!)
 * import DB
 
 ### Deployment
 
-* via Deployer => deploy.php
+* via Deployer
+
+```
+vendor/deployer/deployer/dep deploy -vvv 
+```
 
 ## License
 
