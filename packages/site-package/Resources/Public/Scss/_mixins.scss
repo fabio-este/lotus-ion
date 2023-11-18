@@ -64,3 +64,19 @@
     background: -moz-linear-gradient(top,  $from, $to);
     filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$from}', endColorstr='#{$to}');
   }
+
+
+  
+//https://getbootstrap.com/docs/5.0/layout/containers/
+// Usage
+//.custom-container {
+//  @include make-container();
+//}
+@mixin make-container($padding-x: $container-padding-x) {
+  width: 100%;
+  padding-right: $padding-x;
+  padding-left: $padding-x;
+  margin-right: auto;
+  margin-left: auto;
+}
+

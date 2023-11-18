@@ -10,19 +10,44 @@
 * MySql
 * Apache2 Webserver
 * Composer (https://getcomposer.org/download/)
+* Yarn (https://yarnpkg.com/getting-started)
+
+### Local Setup
+
 * DDEV [LOCAL DEVELOPMENT] (https://ddev.readthedocs.io/en/stable/users/install/)
-
-### Setup
-
-* Quickinstall via local_install.sh (!!! DON'T USE ON SERVER !!!)
+* Install via local_install.sh (!!! DON'T USE ON SERVER !!!)
 * import DB
+
+### Launch Local Instance
+
+* ddev start
+* ddev auth ssh [authorizes DDEV Container]
+
+
+### Build
+
+* via Yarn
+
+For Development
+```
+ddev auth ssh && ddev ssh
+yarn watch
+```
+
+Before Committing to CVS & Deployment
+```
+ddev auth ssh && ddev ssh
+yarn watch
+```
+
 
 ### Deployment
 
 * via Deployer
 
 ```
-vendor/deployer/deployer/dep deploy -vvv 
+ddev auth ssh && ddev ssh
+dep deploy [-vvv]   
 ```
 
 ## License

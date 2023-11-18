@@ -5,7 +5,7 @@ call_user_func(function()
     /**
      * Temporary variables
      */
-    $extensionKey = 'sitepackage';
+    $extensionKey = 'site_package';
 
     /**
      * Default PageTS for Sitepackage

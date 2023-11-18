@@ -1,5 +1,5 @@
 {
-  "name": "site-package",
+  "name": "site_package",
   "version": "1.0.0",
   "main": "index.js",
   "author": "Fabio Stegmeyer",

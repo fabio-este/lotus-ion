@@ -13,8 +13,8 @@ page {
         fileInverted = EXT:site_package/Resources/Public/Images/logo-inverted.svg
         height = 52
         width = 192
-        alt = SitePackage
-        linktitle = SitePackage
+        alt = Lotus Ion Logo
+        linktitle = Lotus Ion Logo
     }
     favicon {
         file = EXT:site_package/Resources/Public/Icons/favicon.ico

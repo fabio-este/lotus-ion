@@ -9,3 +9,32 @@ button.navbar-toggler:focus:not(:focus-visible) {
         outline: 0;
         box-shadow: none;
     }
+
+.navbar-mainnavigation{
+
+    --mainnavigation-link-font-size: 1.25rem;
+    &.navbar-fixed-top {
+        position: fixed;
+        top: 0;
+        z-index: 1020;
+        max-height: 100vh;
+        overflow-y: auto;
+        right: 0;
+        left: 0;
+        box-shadow: none;
+        --bs-bg-opacity: 0;
+
+        &.navbar-transition{
+            height: 100vh;
+        }
+    }
+
+       .navbar-brand-image img {
+        max-height: calc(var(--mainnavigation-nav-height) * .75);
+    }
+    
+}
+
+body{
+display: none
+;}

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Extension Manager/Repository config file for ext "site-package".
+ * Extension Manager/Repository config file for ext "site_package".
  */
 $EM_CONF[$_EXTKEY] = [
     'title' => 'SitePackage',

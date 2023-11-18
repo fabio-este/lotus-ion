@@ -20,14 +20,14 @@ return [
         'backend' => [
             'backendFavicon' => '',
             'backendLogo' => '',
-            'loginBackgroundImage' => '',
-            'loginFootnote' => '',
-            'loginHighlightColor' => '',
-            'loginLogo' => '',
+            'loginBackgroundImage' => 'EXT:site_package/Resources/Public/Images/backend.jpg',
+            'loginFootnote' => 'Lotus Ion @ 2023',
+            'loginHighlightColor' => '#1c0a33',
+            'loginLogo' => 'EXT:site_package/Resources/Public/Images/logo.png',
             'loginLogoAlt' => '',
         ],
         'bootstrap_package' => [
-            'disableCssProcessing' => '0',
+            'disableCssProcessing' => '1',
             'disableGoogleFontCaching' => '0',
             'disablePageTsBackendLayouts' => '0',
             'disablePageTsContentElements' => '0',
@@ -120,6 +120,7 @@ return [
         ],
         'sitename' => 'lotus-ion.de',
         'systemMaintainers' => [
+            1,
             1,
         ],
     ],
