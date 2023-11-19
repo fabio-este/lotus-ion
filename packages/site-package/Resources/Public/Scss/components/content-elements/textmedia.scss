@@ -1,0 +1,22 @@
+.gallery-item a{
+
+    position: relative;
+    border-radius: 13px;
+    box-shadow: 0 2px 2px #18010c, 0 0 40px #FFFCD8;
+    overflow: hidden;
+
+    &:before{
+        content: ' ';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    &:hover{
+        &:before{
+            background-color: rgba(0,0,0,0.3);    
+        }
+    }
+}

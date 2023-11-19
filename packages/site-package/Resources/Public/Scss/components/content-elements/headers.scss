@@ -1,0 +1,16 @@
+h2, .h2 {
+    font-size: calc(1.5rem + 0.6vw);
+    font-weight: 600;
+}
+
+.frame-header{
+        margin-bottom: 2rem;
+    h1, .h1,
+    h2, .h2,
+    h3, .h3,
+    h4, .h4,
+    h5, .h5,
+    h6, .h6{
+  //      color: #1C0035;
+    }
+}

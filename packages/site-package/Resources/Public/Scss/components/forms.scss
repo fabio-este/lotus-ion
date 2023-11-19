@@ -1,0 +1,38 @@
+nav.form-navigation {
+    display: flex;
+    justify-content: end;
+
+    .btn-primary{
+        background: rgb(203,144,86);
+        background: linear-gradient(-35deg, #9C4320 0%, #F9EE96 100%);
+        box-shadow: 0px 2px 5px #9C4320;
+        
+        font-size: 1.5rem;
+        padding: 0.25rem 2rem;
+        border-radius: 0.75rem;
+    
+        color: #FFFCD8;
+        background: -webkit-linear-gradient(#F9EE96 15%, #9C4320 100%);
+    
+        -webkit-text-fill-color: -webkit-linear-gradient(#F9EE96 15%, #9C4320 100%);
+        text-shadow: 0 0 5px #FFF, 0 0 40px #FFFCD8, 0 0 55px #9C4320, 0 2px 2px #18010c;
+        
+    
+        outline: none;
+        border: none;
+        box-shadow: 0 2px 2px #18010c, 0 0 40px #FFFCD8;
+    }
+}
+
+.form-control:focus, .form-group input[type="file"]:focus, .frame-type-felogin_login input[type="text"]:focus, .frame-type-felogin_login input[type="password"]:focus {
+    color: var(--bs-body-color);
+    background-color: var(--bs-body-bg);
+    border-color: #e19396;
+    outline: 0;
+    box-shadow: 0 2px 2px #18010c, 0 0 40px #FFFCD8;
+}
+
+
+label.form-label{
+    text-shadow: 2px 7px 5px #18010c;
+}

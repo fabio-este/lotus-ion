@@ -1,0 +1,21 @@
+a.btn.btn-primary, .frame-type-felogin_login input[type="submit"]:hover, .cc-btn:hover {
+    background: rgb(203,144,86);
+    background: linear-gradient(-35deg, #9C4320 0%, #F9EE96 100%);
+    box-shadow: 0px 2px 5px #9C4320;
+    
+    font-size: 1.752rem;
+    font-weight: bold;
+    padding: 0.25rem 2rem;
+    border-radius: 0.75rem;
+
+    color: #FFFCD8;
+    background: -webkit-linear-gradient(#F9EE96 15%, #9C4320 100%);
+
+    -webkit-text-fill-color: -webkit-linear-gradient(#F9EE96 15%, #9C4320 100%);
+    text-shadow: 0 0 5px #FFF, 0 0 40px #FFFCD8, 0 0 55px #9C4320, 0 2px 2px #000;
+    width: 100%;
+
+    outline: none;
+    border: none;
+    box-shadow: 0 2px 2px #18010c, 0 0 40px #FFFCD8;
+}
