@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "405e88c584497863e7a267f0f102a446",
+    "content-hash": "dbf0badacbbe19babb9082217f657ce6",
     "packages": [
         {
             "name": "b13/container",
@@ -1026,7 +1026,10 @@
             "dist": {
                 "type": "path",
                 "url": "packages/site-package",
-                "reference": "e89fbdcb25da29d0d6c686a3914020d915206334"
+                "reference": "8b4ce7083d32059d1e3c60a9ed99b0df803f0779"
+            },
+            "require": {
+                "bk2k/bootstrap-package": "^13.0 || ^14.0"
             },
             "type": "typo3-cms-extension",
             "extra": {
@@ -1047,7 +1050,6 @@
                 "TYPO3 CMS"
             ],
             "transport-options": {
-                "symlink": false,
                 "relative": true
             }
         },
@@ -1797,16 +1799,16 @@
         },
         {
             "name": "phpstan/phpdoc-parser",
-            "version": "1.24.2",
+            "version": "1.24.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpdoc-parser.git",
-                "reference": "bcad8d995980440892759db0c32acae7c8e79442"
+                "reference": "12f01d214f1c73b9c91fdb3b1c415e4c70652083"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/bcad8d995980440892759db0c32acae7c8e79442",
-                "reference": "bcad8d995980440892759db0c32acae7c8e79442",
+                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/12f01d214f1c73b9c91fdb3b1c415e4c70652083",
+                "reference": "12f01d214f1c73b9c91fdb3b1c415e4c70652083",
                 "shasum": ""
             },
             "require": {
@@ -1838,9 +1840,9 @@
             "description": "PHPDoc parser with support for nullable, intersection and generic types",
             "support": {
                 "issues": "https://github.com/phpstan/phpdoc-parser/issues",
-                "source": "https://github.com/phpstan/phpdoc-parser/tree/1.24.2"
+                "source": "https://github.com/phpstan/phpdoc-parser/tree/1.24.3"
             },
-            "time": "2023-09-26T12:28:12+00:00"
+            "time": "2023-11-18T20:15:32+00:00"
         },
         {
             "name": "psr/cache",

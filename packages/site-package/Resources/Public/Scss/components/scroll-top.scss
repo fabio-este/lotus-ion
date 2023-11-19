@@ -1,3 +1,18 @@
 .scroll-top {
     bottom: 10px;
+    background: rgb(203,144,86);
+    background: linear-gradient(-35deg, #9C4320 0%, #F9EE96 100%);
+    box-shadow: 0px 2px 5px #9C4320;
+    width: 48px;
+    height: 48px;
+
+    .scroll-top-icon:before {
+        border-radius: 0.25rem;
+        border-top: 5px solid;
+        border-left: 5px solid;
+        top: 59%;
+        left: 56%;
+        width: 40%;
+        height: 40%;
+    }
 }

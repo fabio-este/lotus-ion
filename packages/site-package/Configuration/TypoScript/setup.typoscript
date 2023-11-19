@@ -1,7 +1,7 @@
 ######################
 #### DEPENDENCIES ####
 ######################
-@import 'EXT:site_package/Configuration/TypoScript/Setup/typo3encore.typoscript'
+### @import 'EXT:site_package/Configuration/TypoScript/Setup/typo3encore.typoscript'
 
 
 ##############
@@ -9,7 +9,7 @@
 ##############
 page {
     includeCSS {
-      theme = >
+      theme = EXT:site_package/Resources/Public/Scss/theme.scss  
     }
 
     includeJSLibs {

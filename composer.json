@@ -22,10 +22,7 @@
 	"repositories": [
 		{
 			"type": "path",
-			"url": "packages/site-package",
-			"options": {
-	            "symlink": false
-        	}
+			"url": "packages/site-package"
 		}
 	],
 	"require": {

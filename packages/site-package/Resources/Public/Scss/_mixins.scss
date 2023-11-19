@@ -1,15 +1,4 @@
-@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
-    @if $inset {
-      -webkit-box-shadow:inset $top $left $blur $color;
-      -moz-box-shadow:inset $top $left $blur $color;
-      box-shadow:inset $top $left $blur $color;
-    } @else {
-      -webkit-box-shadow: $top $left $blur $color;
-      -moz-box-shadow: $top $left $blur $color;
-      box-shadow: $top $left $blur $color;
-    }
-  }
-  
+
   @mixin text-field {
    display: inline-block;
     outline: none;
@@ -80,3 +69,11 @@
   margin-left: auto;
 }
 
+// Filter mixin
+@mixin filter($filter-type,$filter-amount) { 
+  -webkit-filter: $filter-type+unquote('(#{$filter-amount})');
+  -moz-filter: $filter-type+unquote('(#{$filter-amount})');
+  -ms-filter: $filter-type+unquote('(#{$filter-amount})');
+  -o-filter: $filter-type+unquote('(#{$filter-amount})');
+  filter: $filter-type+unquote('(#{$filter-amount})');
+}

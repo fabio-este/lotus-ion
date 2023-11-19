@@ -3,6 +3,6 @@
 #############
 RTE {
     default {
-        preset = site-package
+        preset = site_package
     }
 }

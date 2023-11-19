@@ -1,7 +1,7 @@
-plugin.tx_typo3encore {
-    settings {
-        # These paths are relative to the web root (public) directory
-        entrypointJsonPath = build/entrypoints.json
-        manifestJsonPath = build/manifest.json
-    }
-}
+//plugin.tx_typo3encore {
+//    settings {
+//        # These paths are relative to the web root (public) directory
+//        entrypointJsonPath = build/entrypoints.json
+//        manifestJsonPath = build/manifest.json
+//    }
+//}

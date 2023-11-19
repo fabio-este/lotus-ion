@@ -27,7 +27,9 @@ div.contact-floater {
             }
 
             a {
-                background: $primary;
+                background: rgb(203,144,86);
+                background: linear-gradient(-35deg, #9C4320 0%, #F9EE96 100%);
+                box-shadow: 0px 2px 5px #9C4320;
                 font-size: 32px;
                 line-height: 48px;
                 color: $white;

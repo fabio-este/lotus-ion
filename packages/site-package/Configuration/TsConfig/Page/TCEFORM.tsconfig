@@ -3,14 +3,31 @@
 #
 TCEFORM {
     pages {
-
+        layout {
+            addItems {
+                header-transparent = Transparenter Header
+                header-colored = Header Hintergrundfarbe
+            }
+        }
     }
     tt_content {
         frame_class{
-    addItems {
-                frame-round-images = Round Images
-                frame-border-radius-images = Round Corners Images
+            addItems {
+                frame-round-images = Runde Bilder
+                frame-border-radius-images = Bilder mit runden Ecken
+            }
+          
+            types{
+                container_1_columns{
+                    addItems {
+                        fullscreen = Fullscreen
+                    }
+                }
             }
         }
+
+
+      
+        
     }
 }

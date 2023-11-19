@@ -27,7 +27,7 @@ return [
             'loginLogoAlt' => '',
         ],
         'bootstrap_package' => [
-            'disableCssProcessing' => '1',
+            'disableCssProcessing' => '0',
             'disableGoogleFontCaching' => '0',
             'disablePageTsBackendLayouts' => '0',
             'disablePageTsContentElements' => '0',
