@@ -1,57 +1,61 @@
-.frame{
-    &.frame-frame-round-images{
-         picture {
-            border-radius: 50%;
-            overflow: hidden;
-        }
+.frame {
+  &.frame-frame-round-images {
+    picture {
+      border-radius: 50%;
+      overflow: hidden;
+    }
+  }
+
+  &.frame-fullscreen {
+    aspect-ratio: 1.7777777778;
+    color: #fffcd8;
+    background: -webkit-linear-gradient(#f9ee96 15%, #9c4320 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: -webkit-linear-gradient(#f9ee96 15%, #9c4320 100%);
+    filter: drop-shadow(0 0 40px #fffcd8) drop-shadow(0 0 55px #9c4320)
+      drop-shadow(0 0 55px #1c0035);
+
+    .frame-header {
+      h1,
+      .h1,
+      h2,
+      .h2,
+      h3,
+      .h3,
+      h4,
+      .h4,
+      h5,
+      .h5,
+      h6,
+      .h6 {
+        color: #fffcd8;
+      }
     }
 
-    &.frame-fullscreen{
-        aspect-ratio: 16 / 9;
-        color: #FFFCD8;
-        background: -webkit-linear-gradient(#F9EE96 15%, #9C4320 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: -webkit-linear-gradient(#F9EE96 15%, #9C4320 100%);
-        text-shadow:
-         0 0 5px #FFF, 
-        0 0 40px #FFFCD8, 
-        0 0 55px #9C4320, 
-        0 2px 2px #000;
-        box-shadow: 0 2px 2px #18010c, 0 0 40px #FFFCD8;
-        .frame-header{
+    .frame-type-text {
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 3rem;
+      padding: 2rem 3rem;
+    }
+  }
 
-            h1, .h1,
-            h2, .h2,
-            h3, .h3,
-            h4, .h4,
-            h5, .h5,
-            h6, .h6{
-                color: #FFFCD8;
-            }
-        }
+  &.frame-has-backgroundimage {
+    box-shadow: 0 2px 2px #18010c, 0 0 40px #fffcd8;
 
-        .frame-type-text {
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 3rem;
-            padding: 2rem 3rem;
-        }
-        
-    } 
+    --frame-color: #cb9056;
+    --frame-background: #1c0035;
+    --frame-link-color: #9c4320;
+    --frame-link-hover-color: #9c4320;
 
-    &.frame-has-backgroundimage{
-        box-shadow: 0 2px 2px #18010c, 0 0 40px #FFFCD8;
-        
-            }
+    box-shadow: 0 2px 2px #18010c, 0 0 40px #fffcd8;
+    border-radius: 5px;
+    
 
-
-            &.frame-background-dark {
-                --frame-color: #cb9056;
-                --frame-background: #1c0035;
-                --frame-link-color: #9C4320;
-                --frame-link-hover-color: #9C4320;
-
-                box-shadow: 0 2px 2px #18010c, 0 0 40px #FFFCD8;
-                border-radius: 5px;
-            }
-            
+    .frame-background-dark{
+        --frame-color: #cb9056;
+        --frame-background: #1c0035 ;
+        --frame-link-color: #9c4320;
+        --frame-link-hover-color: #9c4320;
+    }
+  }
 }
