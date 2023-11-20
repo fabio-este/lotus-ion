@@ -53,7 +53,7 @@ button.navbar-toggler:focus:not(:focus-visible) {
         background: -webkit-linear-gradient(#f8e07c 33%, #d48334 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        font-size: 1.25em;
+        font-size: 1.125em;
 
         filter: drop-shadow(0 -3px 5px #f8e07c) drop-shadow(0 2px 24px #d48334)
           drop-shadow(0 2px 1px #1c0035);
@@ -176,7 +176,7 @@ button.navbar-toggler:focus:not(:focus-visible) {
 
         span.nav-link-text,
         .nav-link-social-icon {
-          font-size: 1.5em;
+          font-size: 1.125em;
         }
       }
     }
