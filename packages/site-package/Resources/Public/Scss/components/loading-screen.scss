@@ -76,7 +76,7 @@
       }
 
       &:nth-of-type(4) {
-        transform: rotateX(60deg) rotateY(30deg);
+        transform: rotateX(80deg) rotateY(40deg);
 
         > div,
         > div:after {
@@ -85,7 +85,7 @@
       }
 
       &:nth-of-type(5) {
-        transform: rotateX(-60deg) rotateY(30deg);
+        transform: rotateX(-80deg) rotateY(40deg);
 
         > div,
         > div:after {
@@ -94,7 +94,7 @@
       }
 
       &:nth-of-type(6) {
-        transform: rotateX(50deg) rotateY(40deg);
+        transform: rotateX(-80deg) rotateY(180deg);
 
         > div,
         > div:after {
@@ -103,7 +103,7 @@
       }
 
       &:nth-of-type(7) {
-        transform: rotateX(50deg) rotateY(40deg);
+        transform: rotateX(20deg) rotateY(80deg);
 
         > div,
         > div:after {
