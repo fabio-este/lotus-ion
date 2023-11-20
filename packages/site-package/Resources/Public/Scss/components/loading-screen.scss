@@ -8,7 +8,23 @@
   z-index: 9999;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
   @include transition(all 500ms ease-in-out);
+  --animation-width: 200px;
+
+  @media (min-width: 50px) {
+    --animation-width: 250px;
+  }
+  @media (min-width: 768px) {
+    --animation-width: 300px;
+  }
+  @media (min-width: 968px) {
+    --animation-width: 350px;
+  }
+  @media (min-width: 1400px) {
+    --animation-width: 400px;
+  }
+
   div.wrapper {
     position: fixed;
     left: 0;
@@ -16,25 +32,27 @@
     bottom: 0;
     right: 0;
     img {
-      max-width: 300px;
+      max-width: calc(var(--animation-width) * 2 / 3);
       margin: auto;
 
       position: absolute;
-      height: 200px;
-      width: 200px;
+      height: calc(var(--animation-width) / 2);
+      width: calc(var(--animation-width) / 2);
       background: #1c0035;
       border-radius: 50%;
       box-shadow: 0 0 25px #fff;
       animation: nucleus_ 2s infinite linear;
       left: 50%;
       top: 50%;
-      margin-top: -100px;
-      margin-left: -100px;
+      margin-top: calc(var(--animation-width) / 4 * -1);
+      margin-left: calc(var(--animation-width) / 4 * -1);
       padding: 5px;
       filter: drop-shadow(0 -3px 5px #f8e07c) drop-shadow(0 2px 24px #d48334)
         drop-shadow(0 2px 1px #1c0035);
       box-shadow: 0 8px 14px #1c0035, 0 0 23px #f9ee96, 0 0 34px #d48334;
       z-index: 9;
+      @include transition(opacity 500ms ease-in-out);
+      opacity: 1;
     }
     > div {
       border-radius: 50%;
@@ -44,9 +62,9 @@
       position: absolute;
       left: 50%;
       top: 50%;
-      margin-left: -200px;
-      margin-top: -200px;
-
+      margin-left: calc(var(--animation-width) / 2 * -1);
+      margin-top: calc(var(--animation-width) / 2 * -1);
+      @include transition(opacity 500ms ease-in-out);
       &:nth-of-type(1) {
         transform: rotateX(-80deg) rotateY(20deg);
 
@@ -111,12 +129,12 @@
       }
 
       > div {
-        width: 400px;
-        height: 400px;
+        width: var(--animation-width);
+        height: var(--animation-width);
         position: relative;
         transform-style: preserve-3d;
         animation: trail_ 2s infinite linear;
-
+        @include transition(opacity 500ms ease-in-out);
         &:after {
           content: "";
           position: absolute;
