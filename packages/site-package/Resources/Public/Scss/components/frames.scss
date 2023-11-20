@@ -27,6 +27,32 @@
       border-radius: 3rem;
       padding: 2rem 3rem;
     }
+
+    @media (min-width: 1200px) {
+      .frame-group-container {
+        height: 100%;
+        .frame-group-inner {
+          height: 100%;
+          .frame-container {
+            height: 100%;
+            .frame-inner {
+              height: 100%;
+              .contentcontainer {
+                height: 100%;
+                .contentcontainer-column {
+                  height: 100%;
+
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  flex-direction: column;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 
   &.frame-background-light {
@@ -104,12 +130,15 @@
 
     box-shadow: 0 2px 2px #18010c, 0 0 40px #f9ee96;
     border-radius: 5px;
-    color: #f9ee96;
+    color: #fff;
 
     text-shadow: 0 0 2px #f9ee96, 0 2px 1px #d48334;
     p,
     span,
-    a {
+    a,
+    .element-header,
+    .element-subheader {
+      color: #fff;
       filter: drop-shadow(0 1px 1px #1c0035) drop-shadow(0 -2px 33px #f9ee96);
     }
     .frame-background-dark {
