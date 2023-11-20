@@ -25,7 +25,7 @@ page {
     }
 
     includeJSFooter {
-        
+              loading-screen = EXT:site_package/Resources/Public/JavaScript/loading-screen.js
     }
 }
 
