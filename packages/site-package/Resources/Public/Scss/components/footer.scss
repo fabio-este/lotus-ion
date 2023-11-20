@@ -1,61 +1,106 @@
-
 footer#page-footer {
-    
-    a{
-        display:  inline-block;    
-        text-decoration: none;
-        color: #fff;
-        @include transition(all 150ms ease-in-out);
+  background-color: #18010c;
+  a {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    @include transition(all 150ms ease-in-out);
 
-        &:hover{
-            color: $primary;
-            transform: translateX(3px);
-
-        }
-
-        .footer-section-meta {
-            background: #1a011c;
-        }
-    }
-
-
-    ul{ 
-        list-style-type:none;
-        padding-left: 0;
+    &:hover {
+      color: $primary;
+      transform: translateX(3px);
     }
 
     .footer-section-meta {
-        background: #000;
-
-        .footer-copyright {
-            padding: 1.275rem;
-            color: #FFFCD8;
-            background: -webkit-linear-gradient(#F9EE96 15%, #9C4320 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: -webkit-linear-gradient(#F9EE96 15%, #9C4320 100%);
-            text-shadow: 0 0 5px #FFF, 0 0 40px #FFFCD8, 0 0 55px #9C4320, 0 2px 2px #000;
-            background: -webkit-linear-gradient(#F9EE96 15%, #9C4320 50%, #9C4320 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: -webkit-linear-gradient(#F9EE96 15%, #9C4320 100%);
-            text-shadow: #9C4320;
-            text-align: center;
-            background: #1a011c;
-            padding: 2rem 1.275rem;
-
-             p {
-                margin-bottom: 0;
-                padding: 1rem;
-            }
-
-            &:before,&:after{
-                content: ' ';
-                background: #FFFCD8;
-                width: 100%;
-                height: 3px;
-                display: block;
-                background-image: radial-gradient(circle, rgb(156, 67, 32) 0%, rgb(249, 238, 150) 100%) !important;
-                box-shadow: 0px 2px 5px #9C4320;
-            }
-        }
+      background: #1a011c;
     }
+  }
+
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+
+  .footer-section-meta {
+    background: #212121;
+    --frame-color: #ffffff;
+    --frame-background: #212121;
+    --frame-link-color: #d4676c;
+    --frame-link-hover-color: #d4676c;
+
+    .footer-copyright {
+      padding: 1.275rem;
+      color: #f9ee96;
+      background: -webkit-linear-gradient(#f9ee96 15%, #d48334 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: -webkit-linear-gradient(
+        #f9ee96 15%,
+        #d48334 100%
+      );
+      text-shadow: 0 0 5px #fff, 0 0 40px #f9ee96, 0 0 55px #d48334,
+        0 2px 2px #000;
+      background: -webkit-linear-gradient(
+        #f9ee96 15%,
+        #d48334 50%,
+        #d48334 100%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: -webkit-linear-gradient(
+        #f9ee96 15%,
+        #d48334 100%
+      );
+      text-shadow: #d48334;
+      text-align: center;
+      background: #1a011c;
+      padding: 2rem 1.275rem;
+
+      p {
+        margin-bottom: 0;
+        padding: 1rem;
+      }
+
+      &:before,
+      &:after {
+        content: " ";
+        background: #f9ee96;
+        width: 100%;
+        height: 3px;
+        display: block;
+        background-image: radial-gradient(
+          circle,
+          rgb(156, 67, 32) 0%,
+          rgb(249, 238, 150) 100%
+        ) !important;
+        box-shadow: 0px 2px 5px #d48334;
+      }
+    }
+  }
+
+  ul#meta_menu {
+    list-style-type: none;
+    text-align: center;
+
+    margin-bottom: 2rem;
+
+    background: #1a011c;
+    li {
+      display: inline;
+
+      a {
+        text-align: right;
+        padding: 0.75rem;
+        color: #f9ee96;
+        background: -webkit-linear-gradient(#f9ee96 15%, #d48334 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: -webkit-linear-gradient(
+          #f9ee96 15%,
+          #d48334 100%
+        );
+        text-shadow: 0 0 5px #fff, 0 0 40px #f9ee96, 0 0 55px #d48334,
+          0 2px 2px #000;
+        font-size: 1.25rem;
+        text-decoration: none;
+      }
+    }
+  }
 }

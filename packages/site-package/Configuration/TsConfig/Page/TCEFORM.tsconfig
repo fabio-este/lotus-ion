@@ -13,8 +13,10 @@ TCEFORM {
     tt_content {
         frame_class{
             addItems {
-                frame-round-images = Runde Bilder
-                frame-border-radius-images = Bilder mit runden Ecken
+                frame-round-images = Round Pictures
+                frame-border-radius-images = Round Edge Pictures
+                frame-hovering-images = Hovering Pictures
+                frame-hovering-border-radius-images = Round Edge Hovering Pictures
             }
           
             types{
@@ -25,9 +27,19 @@ TCEFORM {
                 }
             }
         }
-
-
-      
+        background_color_class{
+            addItems {
+                light = Light
+                light-purple = Purple
+                dark-purple = Dark Purple
+                orange = Orange
+                gradient-gold = Gradient: Gold
+                gradient-orange-purple = Gradient: Orange -> Purple
+                gradient-purple-dark-purple = Gradient: Purple -> Dark Purple
+                gradient-yellow-purple = Gradient: Yellow -> Purple
+                
+            }
+        }     
         
     }
 }

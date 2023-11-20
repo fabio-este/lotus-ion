@@ -18,10 +18,32 @@ h2,
   .h5,
   h6,
   .h6 {
+    &.element-header {
+      font-weight: 600;
+      color: #f9ee96;
+      filter: drop-shadow(0 2px 1px #1c0035) drop-shadow(0 -1px 3px #f9ee96)
+        drop-shadow(0 2px 1px #d48334);
+    }
+  }
+}
+
+form {
+  margin-bottom: 2rem;
+  h1,
+  .h1,
+  h2,
+  .h2,
+  h3,
+  .h3,
+  h4,
+  .h4,
+  h5,
+  .h5,
+  h6,
+  .h6 {
+    font-weight: 600;
     color: #f9ee96;
-    background: -webkit-linear-gradient(#f9ee96 33%, #9c4320);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    filter: drop-shadow(0px 0px #9c4320);
+    filter: drop-shadow(0 2px 1px #1c0035) drop-shadow(0 -1px 3px #f9ee96)
+      drop-shadow(0 2px 1px #d48334);
   }
 }

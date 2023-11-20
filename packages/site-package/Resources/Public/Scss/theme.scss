@@ -37,6 +37,5 @@
 @import "components/content-elements/icongroup.scss";
 @import "components/content-elements/textmedia.scss";
 @import "components/content-elements/timeline.scss";
-main#page-content {
-    padding: 3rem 0;
-}
+@import "components/content-elements/sociallinks.scss";
+@import "components/content-elements/cards.scss";

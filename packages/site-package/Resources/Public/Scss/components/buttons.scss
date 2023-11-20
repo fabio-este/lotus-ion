@@ -1,37 +1,39 @@
-a.btn.btn-primary, .frame-type-felogin_login input[type="submit"], .cc-btn, nav.form-navigation    .btn-primary{
-    
-    background: rgb(203,144,86);
-    background: linear-gradient(-35deg, #9C4320 0%, #F9EE96 100%);
-    box-shadow: 0px 2px 5px #9C4320;
-    
-    font-size: 1.5rem;
-    font-weight: bold;
-    padding: 0.25rem 2rem;
-    border-radius: 0.75rem;
+a.btn.btn-primary,
+.frame-type-felogin_login input[type="submit"],
+.cc-btn,
+nav.form-navigation .btn-primary {
+  background: rgb(203, 144, 86);
+  background: linear-gradient(-35deg, #d48334 0%, #f9ee96 100%);
+  box-shadow: 0px 2px 5px #d48334;
 
-    color: #FFFCD8;
-    background: -webkit-linear-gradient(#F9EE96 15%, #9C4320 100%);
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 0.25rem 2rem;
+  border-radius: 0.75rem;
 
-    -webkit-text-fill-color: -webkit-linear-gradient(#F9EE96 15%, #9C4320 100%);
-    text-shadow: 0 0 5px #FFF, 0 0 40px #FFFCD8, 0 0 55px #9C4320, 0 2px 2px #000;
-    width: 100%;
+  color: #f9ee96;
+  background: -webkit-linear-gradient(#f9ee96 15%, #d48334 100%);
 
-    width: auto;
-    outline: none;
-    border: none;
-    box-shadow: 0 2px 2px #18010c, 0 0 10px #FFFCD8;
+  -webkit-text-fill-color: -webkit-linear-gradient(#f9ee96 15%, #d48334 100%);
+  text-shadow: 0 0 5px #fff, 0 0 40px #f9ee96, 0 0 55px #d48334, 0 2px 2px #000;
+  width: 100%;
 
-@include transition(all 150ms ease-in-out);
+  width: auto;
+  outline: none;
+  border: none;
+  box-shadow: 0 2px 2px #18010c, 0 0 10px #f9ee96;
 
-    &:hover{
-  
-        box-shadow: 0 2px 2px #18010c, 0 0 40px #FFFCD8;
-        @include transition(all 150ms ease-in-out);
-    }
+  @include transition(all 150ms ease-in-out);
 
-    &:focus,    &:active{
-        background: -webkit-linear-gradient(#9C4320  15%, #F9EE96  100%);  
-        box-shadow: inset 0 2px 2px #18010c;
-        @include transition(all 150ms ease-in-out);
-    }
+  &:hover {
+    box-shadow: 0 2px 2px #18010c, 0 0 40px #f9ee96;
+    @include transition(all 150ms ease-in-out);
+  }
+
+  &:focus,
+  &:active {
+    background: -webkit-linear-gradient(#d48334 -10%, #f9ee96 90%);
+    box-shadow: inset 0 2px 7px #18010c;
+    @include transition(all 150ms ease-in-out);
+  }
 }
