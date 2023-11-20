@@ -1,0 +1,33 @@
+ul.sociallinks-list {
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0.5rem;
+  li.sociallinks-item {
+    width: auto;
+    filter: drop-shadow(0 2px 2px #1c0035) drop-shadow(0 -1px 24px #f9ee96)
+      drop-shadow(0 2px 1px #d48334);
+    a.sociallinks-link {
+      gap: 0;
+      font-size: 2rem;
+      color: #fff;
+
+      background: -webkit-linear-gradient(#f9ee96 0%, #d48334 100%);
+      -webkit-text-fill-color: -webkit-linear-gradient(
+        #f9ee96 15%,
+        #d48334 100%
+      );
+      text-shadow: 0 0 5px #fff, 0 3px 4px #1a011c;
+
+      height: 2.5rem;
+      flex-shrink: 0;
+
+      span.sociallinks-link-icon {
+        font-size: 2rem;
+        text-align: center;
+        opacity: 0.8;
+        width: 2.5rem;
+        height: 2.5rem;
+      }
+    }
+  }
+}
