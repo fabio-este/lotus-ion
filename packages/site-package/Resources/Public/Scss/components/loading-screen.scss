@@ -10,19 +10,16 @@
   justify-content: center;
   overflow: hidden;
   @include transition(all 500ms ease-in-out);
+  * {
+    @include transition(all 500ms ease-in-out);
+  }
   --animation-width: 200px;
 
-  @media (min-width: 50px) {
+  @media (min-width: 968px) {
     --animation-width: 250px;
   }
-  @media (min-width: 768px) {
-    --animation-width: 300px;
-  }
-  @media (min-width: 968px) {
-    --animation-width: 350px;
-  }
   @media (min-width: 1400px) {
-    --animation-width: 400px;
+    --animation-width: 300px;
   }
 
   div.wrapper {
@@ -157,9 +154,14 @@
 
     div.wrapper {
       bottom: 100%;
-    }
-    * {
-      opacity: 0;
+      div,
+      div:before,
+      div:after,
+      img {
+        opacity: 0;
+        width: 0 !important;
+        height: 0 !important;
+      }
     }
   }
 
