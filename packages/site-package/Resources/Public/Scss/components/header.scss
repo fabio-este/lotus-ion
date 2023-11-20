@@ -37,8 +37,14 @@ button.navbar-toggler:focus:not(:focus-visible) {
     left: 0;
     box-shadow: none;
     --bs-bg-opacity: 0;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    @media (min-width: 968px) {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    }
 
     .nav-link:not(.nav-link-toggle) {
       span.nav-link-text,
