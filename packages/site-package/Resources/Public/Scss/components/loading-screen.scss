@@ -9,7 +9,7 @@
   align-items: center;
   justify-content: center;
   padding: 3rem;
-  @include transition(all 250ms ease-in-out);
+  @include transition(all 500ms ease-in-out);
   div.wrapper {
     position: fixed;
     left: 0;
