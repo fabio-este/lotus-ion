@@ -77,12 +77,12 @@ footer#page-footer {
   }
 
   ul#meta_menu {
+    padding-bottom: 2rem;
     list-style-type: none;
     text-align: center;
-
-    margin-bottom: 2rem;
-
+    margin-bottom: 0;
     background: #1a011c;
+
     li {
       display: inline;
 
