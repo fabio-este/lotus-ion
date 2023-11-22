@@ -20,9 +20,8 @@ h2,
   .h6 {
     &.element-header {
       font-weight: 600;
-      color: #f9ee96;
-      filter: drop-shadow(0 2px 1px #1c0035) drop-shadow(0 -1px 3px #f9ee96)
-        drop-shadow(0 2px 1px #d48334);
+      color: #265335;
+      //filter: drop-shadow(0 2px 1px #1f5031) drop-shadow(0 -1px 3px #f9ee96)        drop-shadow(0 2px 1px #d48334);
     }
   }
 }
@@ -42,8 +41,7 @@ form {
   h6,
   .h6 {
     font-weight: 600;
-    color: #f9ee96;
-    filter: drop-shadow(0 2px 1px #1c0035) drop-shadow(0 -1px 3px #f9ee96)
-      drop-shadow(0 2px 1px #d48334);
+    color: #265335;
+    //filter: drop-shadow(0 2px 1px #1f5031) drop-shadow(0 -1px 3px #f9ee96)      drop-shadow(0 2px 1px #d48334);
   }
 }

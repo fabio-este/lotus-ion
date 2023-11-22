@@ -23,7 +23,7 @@ button.navbar-toggler:focus:not(:focus-visible) {
   .navbar-brand-image > .navbar-brand-logo-normal {
     display: block;
     -webkit-filter: drop-shadow(0px 1px 1px #f9ee96);
-    filter: drop-shadow(0 2px 0px #1c0035) drop-shadow(0px 0px 4px #f9ee96);
+    filter: drop-shadow(0 1px 2px #1f5031) drop-shadow(0px 0px 4px #f9ee96);
     z-index: 9;
   }
 
@@ -55,8 +55,8 @@ button.navbar-toggler:focus:not(:focus-visible) {
         -webkit-text-fill-color: transparent;
         font-size: 1.125em;
 
-        filter: drop-shadow(0 -3px 5px #f8e07c) drop-shadow(0 2px 24px #d48334)
-          drop-shadow(0 2px 1px #1c0035);
+        filter: drop-shadow(0 -2px 31px #f8e07c) drop-shadow(0 2px 1px #1f5031)
+          drop-shadow(0 2px 1px #1f5031);
 
         @media (min-width: 968px) {
           font-size: 1.25rem;
@@ -71,7 +71,7 @@ button.navbar-toggler:focus:not(:focus-visible) {
         transform: unset;
         top: auto;
         background: -webkit-linear-gradient(#f9ee96 10%, #d48334 60%);
-        box-shadow: 0 0 23px #f9ee96, 0 0 34px #d48334, 0 2px 2px #1c0035;
+        box-shadow: 0 0 23px #f9ee96, 0 0 34px #d48334, 0 2px 2px #1f5031;
 
         left: 50%;
         height: 3px;
@@ -104,7 +104,7 @@ button.navbar-toggler:focus:not(:focus-visible) {
       align-content: center;
       span.nav-divider {
         background: -webkit-linear-gradient(#f9ee96 10%, #d48334 60%);
-        box-shadow: 0 0 23px #f9ee96, 0 0 34px #d48334, 0 2px 2px #1c0035;
+        box-shadow: 0 0 23px #f9ee96, 0 0 34px #d48334, 0 2px 2px #1f5031;
         width: 1px;
         height: 60%;
       }
@@ -113,19 +113,40 @@ button.navbar-toggler:focus:not(:focus-visible) {
     &.navbar-transition {
       --bs-bg-opacity: 1;
       @include box-shadow(0 0 5px rgba(0, 0, 0, 0.1));
-      background-color: #1c0035 !important;
-
-      .navbar-brand-image > .navbar-brand-logo-normal {
-        filter: drop-shadow(0px 4px 15px #f9ee96);
-      }
-
+      background: -webkit-repeating-linear-gradient(
+          top,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 0) 6%,
+          rgba(255, 255, 255, 0.1) 7.5%
+        ),
+        -webkit-repeating-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(
+                0,
+                0,
+                0,
+                0
+              )
+              4%, rgba(0, 0, 0, 0.03) 3.5%),
+        -webkit-repeating-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(
+                255,
+                255,
+                255,
+                0
+              )
+              1.2%, rgba(255, 255, 255, 0.15) 2.2%),
+        linear-gradient(
+          180deg,
+          #c7c7c7 5%,
+          #e6e6e6 65%,
+          #c7c7c7 82%,
+          #b3b3b3 100%
+        );
       .nav-link:not(.nav-link-toggle) {
       }
 
       color: #f9ee96;
-      background-color: #1c0035 !important;
-      background-color: #1c0035 !important;
-      box-shadow: 0 2px 2px #18010c, 0 0 40px #f9ee96;
+      background-color: #1f5031 !important;
+      background-color: #1f5031 !important;
+      box-shadow: 0 2px 2px #1f5031, 0 0 40px #f9ee96;
     }
   }
 
@@ -147,8 +168,8 @@ button.navbar-toggler:focus:not(:focus-visible) {
       @include transition(all 150ms ease-in-out);
       height: calc(100vh);
       display: block;
-      background: #1c0035;
-      background: radial-gradient(circle at top left, #1c0035 50%, #1c0051 94%);
+      background: #f2f3f5;
+      background: linear-gradient(#fdfdfd 2%, #f2f3f5 65%, #7b7c7d 115%);
       background-blend-mode: screen;
       background-blend-mode: screen;
 
@@ -163,6 +184,11 @@ button.navbar-toggler:focus:not(:focus-visible) {
       flex-direction: column;
       align-items: center;
       justify-content: space-around;
+
+      .navbar-brand-image > .navbar-brand-logo-normal {
+        filter: drop-shadow(0px -2px 3px #1a3510)
+          drop-shadow(0px 1px 1px #1a3510);
+      }
 
       .nav-link:not(.nav-link-toggle) {
         text-align: right;

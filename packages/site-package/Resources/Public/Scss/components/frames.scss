@@ -8,13 +8,13 @@
 
   &.frame-hovering-images {
     figure.image {
-      box-shadow: 0 2px 2px #18010c, 0 0 40px #f9ee96;
+      box-shadow: 0 2px 2px #1f5031, 0 0 40px #f9ee96;
     }
   }
   &.frame-hovering-border-radius-images {
     figure.image {
       border-radius: 13px;
-      box-shadow: 0 2px 2px #18010c, 0 0 40px #f9ee96;
+      box-shadow: 0 2px 2px #1f5031, 0 0 40px #f9ee96;
       overflow: hidden;
     }
   }
@@ -56,7 +56,7 @@
   }
 
   &.frame-background-light {
-    color: #18010c;
+    color: #1f5031;
     p,
     span,
     a,
@@ -72,10 +72,10 @@
     .h5,
     h6,
     .h6 {
-      color: #18010c;
+      color: #1f5031;
       &.element-header {
         font-weight: 600;
-        color: #18010c;
+        color: #1f5031;
         filter: none;
       }
     }
@@ -84,12 +84,9 @@
       color: #f9ee96;
     }
 
-    .frame-background-dark {
-      background-color: #220434;
-      color: #f9ee96;
-
+    &.frame-background-green {
       --frame-color: #f9ee96;
-      --frame-background: #220434;
+      --frame-background: #143a22;
       --frame-link-color: #d48334;
       --frame-link-hover-color: #d48334;
 
@@ -111,7 +108,7 @@
         color: #f9ee96;
         &.element-header {
           color: #f9ee96;
-          filter: drop-shadow(0 2px 1px #1c0035) drop-shadow(0 -1px 3px #f9ee96)
+          filter: drop-shadow(0 2px 1px #1f5031) drop-shadow(0 -1px 3px #f9ee96)
             drop-shadow(0 2px 1px #d48334);
         }
       }
@@ -124,11 +121,11 @@
 
   &.frame-has-backgroundimage {
     --frame-color: #f9ee96;
-    --frame-background: #1c0035;
+    --frame-background: #1f5031;
     --frame-link-color: #d48334;
     --frame-link-hover-color: #d48334;
 
-    box-shadow: 0 2px 2px #18010c, 0 0 40px #f9ee96;
+    box-shadow: 0 2px 2px #1f5031, 0 0 40px #f9ee96;
     border-radius: 5px;
     color: #fff;
 
@@ -139,51 +136,28 @@
     .element-header,
     .element-subheader {
       color: #fff;
-      filter: drop-shadow(0 1px 1px #1c0035) drop-shadow(0 -2px 33px #f9ee96);
+      filter: drop-shadow(0 1px 1px #1f5031) drop-shadow(0 -2px 33px #f9ee96);
     }
-    .frame-background-dark {
-      --frame-color: #cb9056;
-      --frame-background: #1c0035;
+    .frame-background-green {
+      --frame-color: #f9ee96;
+      --frame-background: #143a22;
       --frame-link-color: #d48334;
       --frame-link-hover-color: #d48334;
-
-      //background: linear-gradient(150deg, #f9ee96 11%, #1c0035 75%);
+      //background: linear-gradient(150deg, #f9ee96 11%, #1f5031 75%);
       border-radius: 5px;
       color: #f9ee96;
       p,
       span,
       a {
-        filter: drop-shadow(0 1px 1px #1c0035) drop-shadow(0 -2px 33px #f9ee96);
+        filter: drop-shadow(0 1px 1px #1f5031) drop-shadow(0 -2px 33px #f9ee96);
       }
     }
   }
 
-  &.frame-background-gradient-orange-purple {
-    background: rgb(28, 0, 53);
-    background: linear-gradient(
-      150deg,
-      rgba(28, 0, 53, 1) 41%,
-      rgba(235, 111, 56, 1) 100%
-    );
-    box-shadow: 0 2px 2px #18010c, 0 0 40px #f9ee96;
-
-    .textmedia-item.textmedia-text {
-      filter: drop-shadow(0 -2px 15px #f9ee96) drop-shadow(0 3px 1px #1c0035)
-        drop-shadow(0 2px 24px #18010c);
-    }
-  }
-
-  &.frame-background-gradient-yellow-purple {
-    background: rgba(26, 1, 28, 1);
-    background: linear-gradient(
-      to top right,
-      rgba(26, 1, 28, 1) 36%,
-      rgba(26, 1, 28, 1) 75%,
-      rgba(249, 238, 150, 1) 150%
-    );
-  }
-
-  &.frame-background-dark-purple {
-    background-color: #1a011c;
+  &.frame-background-green {
+    --frame-color: #f9ee96;
+    --frame-background: #143a22;
+    --frame-link-color: #d48334;
+    --frame-link-hover-color: #d48334;
   }
 }

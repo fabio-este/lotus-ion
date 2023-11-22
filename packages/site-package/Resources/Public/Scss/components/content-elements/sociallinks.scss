@@ -4,7 +4,7 @@ ul.sociallinks-list {
   gap: 0.5rem;
   li.sociallinks-item {
     width: auto;
-    filter: drop-shadow(0 2px 2px #1c0035) drop-shadow(0 -1px 24px #f9ee96)
+    filter: drop-shadow(0 2px 2px #1f5031) drop-shadow(0 -1px 24px #f9ee96)
       drop-shadow(0 2px 1px #d48334);
     a.sociallinks-link {
       gap: 0;
@@ -16,7 +16,7 @@ ul.sociallinks-list {
         #f9ee96 15%,
         #d48334 100%
       );
-      text-shadow: 0 0 5px #fff, 0 3px 4px #1a011c;
+      text-shadow: 0 0 5px #fff, 0 3px 4px #265335;
 
       height: 2.5rem;
       flex-shrink: 0;

@@ -1,7 +1,7 @@
 ######################
 #### DEPENDENCIES ####
 ######################
-### @import 'EXT:site_package/Configuration/TypoScript/Setup/typo3encore.typoscript'
+ @import 'EXT:site_package/Configuration/TypoScript/Setup/typo3encore.typoscript'
 
 
 ##############

@@ -3,7 +3,6 @@
     justify-content: flex-start;
 
     padding: 1rem;
-    font-weight: bold;
 
     margin: 0.5rem;
     text-align: left;
@@ -14,33 +13,60 @@
     border-radius: 1rem;
 
     padding: 0.5rem;
+    @include transition(all 150ms ease-in-out);
 
     .icongroup-item-text {
-      text-shadow: 0px 2px 3px #1c0035, 0 2px 3px #d48334, 0 0 10px #f9ee96;
-      color: #f9ee96;
+      color: #fff;
+      font-weight: normal;
     }
-
+    .icongroup-item-text-header {
+      font-weight: 400;
+      font-size: 1.125rem;
+    }
     .icongroup-item-icon {
-      color: #f9ee96;
+      background-color: #fff;
       margin-right: 0;
-      height: 5rem;
-      width: 5rem;
-      padding: 1.25rem;
-
+      @include transition(all 150ms ease-in-out);
       border-radius: 50%;
       font-size: 1rem;
-      background-image: radial-gradient(
-        at top,
-        #fff -9%,
-        #f9ee96 10%,
-        #d48334 58%
-      ) !important;
-      box-shadow: 0px 4px 5px #1c0035, 0px 2px 5px #d48334,
+      box-shadow: 0px 4px 5px #1f5031, 0px 2px 5px #d48334,
         0px -2px 10px #f9ee96;
+
+      background: -webkit-repeating-linear-gradient(
+          top,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 0) 6%,
+          rgba(255, 255, 255, 0.1) 7.5%
+        ),
+        -webkit-repeating-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(
+                0,
+                0,
+                0,
+                0
+              )
+              4%, rgba(0, 0, 0, 0.03) 3.5%),
+        -webkit-repeating-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(
+                255,
+                255,
+                255,
+                0
+              )
+              1.2%, rgba(255, 255, 255, 0.15) 2.2%),
+        linear-gradient(
+          180deg,
+          #c7c7c7 5%,
+          #e6e6e6 65%,
+          #c7c7c7 82%,
+          #b3b3b3 100%
+        );
       margin-bottom: 1rem;
 
+      height: 4rem;
+      width: 4rem;
+      padding: 1rem;
       svg {
-        filter: drop-shadow(0 -2px 15px #f9ee96) drop-shadow(0 5px 2px #d48334);
+        color: #4f5957;
+        filter: drop-shadow(0 -1px 1px #8a918a) drop-shadow(0 1px -1px #414c4b);
       }
     }
 
@@ -50,4 +76,8 @@
       }
     }
   }
+}
+
+.frame.frame-default.frame-type-icon_group.frame-layout-default.frame-size-default.frame-height-default.frame-background-silver.frame-space-before-none.frame-space-after-none.frame-no-backgroundimage {
+  background: radial-gradient(ellipse at 56% 13%, #8a918a 22%, #2f3a38);
 }

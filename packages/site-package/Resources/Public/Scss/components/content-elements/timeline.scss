@@ -2,7 +2,7 @@
   .timeline {
     .timeline-item {
       .timeline-item-inner {
-        background: #1c0035;
+        background: #1f5031;
         border-radius: 5px;
 
         color: #f9ee96;
@@ -13,9 +13,9 @@
           #d48334 100%
         );
         text-shadow: 0 0 5px #fff, 0 0 40px #f9ee96, 0 0 55px #d48334,
-          0 2px 2px #1c0035;
+          0 2px 2px #1f5031;
         font-size: 1.25em;
-        box-shadow: 0 2px 2px #18010c, 0 0 40px #f9ee96;
+        box-shadow: 0 2px 2px #1f5031, 0 0 40px #f9ee96;
 
         text-align: center;
         padding: 2rem;
@@ -26,7 +26,7 @@
         .timeline-item-icon:after,
         .timeline-item-icon:before,
         .timeline-item-icon span {
-          box-shadow: 0 2px 2px #18010c, 0 0 30px #f9ee96;
+          box-shadow: 0 2px 2px #1f5031, 0 0 30px #f9ee96;
           border-radius: 50%;
         }
 

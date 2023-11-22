@@ -21,19 +21,19 @@ nav.form-navigation .btn-primary {
   width: auto;
   outline: none;
   border: none;
-  box-shadow: 0 2px 2px #18010c, 0 0 10px #f9ee96;
+  box-shadow: 0 2px 2px #1f5031, 0 0 10px #f9ee96;
 
   @include transition(all 150ms ease-in-out);
 
   &:hover {
-    box-shadow: 0 2px 2px #18010c, 0 0 40px #f9ee96;
+    box-shadow: 0 2px 2px #1f5031, 0 0 40px #f9ee96;
     @include transition(all 150ms ease-in-out);
   }
 
   &:focus,
   &:active {
     background: -webkit-linear-gradient(#d48334 -10%, #f9ee96 90%);
-    box-shadow: inset 0 2px 7px #18010c;
+    box-shadow: inset 0 2px 7px #1f5031;
     @include transition(all 150ms ease-in-out);
   }
 }

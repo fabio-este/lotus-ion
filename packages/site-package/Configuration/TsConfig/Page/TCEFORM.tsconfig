@@ -30,14 +30,9 @@ TCEFORM {
         background_color_class{
             addItems {
                 light = Light
-                light-purple = Purple
-                dark-purple = Dark Purple
-                orange = Orange
-                gradient-gold = Gradient: Gold
-                gradient-orange-purple = Gradient: Orange -> Purple
-                gradient-purple-dark-purple = Gradient: Purple -> Dark Purple
-                gradient-yellow-purple = Gradient: Yellow -> Purple
-                
+                green = Green
+                gold = Gold
+                silver = Silver                
             }
         }     
         
