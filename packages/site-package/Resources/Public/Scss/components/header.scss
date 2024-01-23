@@ -203,5 +203,9 @@ button.navbar-toggler {
 
 .container.container-mainnavigation {
   justify-content: center;
-  padding: 1rem;
+  padding: 0.5rem;
+}
+
+.navbar-mainnavigation .navbar-brand-image img {
+  max-height: calc(var(--mainnavigation-nav-height) * 1);
 }
