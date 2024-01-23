@@ -9,10 +9,6 @@ footer#page-footer {
       color: $primary;
       transform: translateX(3px);
     }
-
-    .footer-section-meta {
-      background: #1a011c;
-    }
   }
 
   ul {
@@ -50,7 +46,6 @@ footer#page-footer {
       );
       text-shadow: #d48334;
       text-align: center;
-      background: #1a011c;
       padding: 2rem 1.275rem;
 
       p {
@@ -80,7 +75,6 @@ footer#page-footer {
     list-style-type: none;
     text-align: center;
     margin-bottom: 0;
-    background: #1a011c;
 
     li {
       display: inline;
