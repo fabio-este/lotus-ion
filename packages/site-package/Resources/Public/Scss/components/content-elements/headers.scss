@@ -24,6 +24,9 @@ h2,
       filter: drop-shadow(0 2px 1px #1c0035) drop-shadow(0 -1px 3px #f9ee96)
         drop-shadow(0 2px 1px #d48334);
     }
+    &.element-subheader {
+      font-weight: 500;
+    }
   }
 }
 
